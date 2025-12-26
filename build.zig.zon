@@ -126,7 +126,7 @@
         },
         .wgpu_linux_x86_64_debug = .{
             .url = "https://github.com/gfx-rs/wgpu-native/releases/download/v27.0.2.0/wgpu-linux-x86_64-release.zip",
-            .hash = "N-V-__8AAHS_-BNtAmT4hK9geZG361RETmD2lG0fk2gyDYh-",
+            .hash = "N-V-__8AAPpC1APAPud19Yp8rJyNQuJ0HwIHTSyIceokAG9W",
             .lazy = true,
         },
         .wgpu_linux_x86_64_release = .{

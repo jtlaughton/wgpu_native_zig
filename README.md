@@ -1,4 +1,14 @@
 # wgpu_native_zig
+
+### Zig FFI Issue with Debug Builds
+The debug binaries of wgpu-native v27.0.2.0 crash when called from Zig but work fine from pure C. This appears to be a Zig FFI issue with this debug-built library (not sure if it manifests for other binaries). The crash manifests as SSE2 exceptions in the GLES backend. This could also be a problem with a specific way these bindings are setup though. This isn't my code obviously, but comparison to c structs and c functions make this seem fairly sane.
+
+**Validation**: A pure C test program successfully creates instances and requests adapters using the same debug library that crashes from Zig.
+
+**Solution**: Use release binaries, which work correctly with Zig's FFI.
+
+## Rest of Doc
+
 Zig bindings for [wgpu-native](https://github.com/gfx-rs/wgpu-native)
 
 This package exposes two modules: `wgpu-c` and `wgpu`.

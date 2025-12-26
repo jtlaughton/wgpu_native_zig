@@ -88,9 +88,10 @@ pub const InstanceExtras = extern struct {
     dx12_shader_compiler: Dx12Compiler,
     gles3_minor_version: Gles3MinorVersion,
     gl_fence_behavior: GLFenceBehaviour,
-    dxil_path: StringView = StringView{},
     dxc_path: StringView = StringView{},
     dxc_max_shader_model: DxcMaxShaderModel,
+    budget_for_device_creation: ?*const u8 = null,
+    budget_for_device_loss: ?*const u8 = null,
 };
 
 pub const InstanceCapabilities = extern struct {
